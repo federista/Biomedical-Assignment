@@ -8,8 +8,8 @@ University Website
 | Name | email  | profile |
 | :--- | :---   | :--- |
 | X ZAID | s4848329@studenti.unige.it | [Federista](hhttps://github.com/federista)
-| Muhammad Malook Bugty | s4904540@studenti.unige.it | [Mbugti](https://github.com/mbugti)
-| Mohammad Azah Hussain | s4916211@studenti.unige.it | 
+| Muhammad Malook Bugti | s4904540@studenti.unige.it | [Mbugti](https://github.com/mbugti)
+| Mohammad Azad Hussain | s4916211@studenti.unige.it | 
 | Raja Taha Hussain | s5046306@studenti.unige.it | 
 | Sassi Kumar uppatala | s5058253@studenti.unige.it |
  
