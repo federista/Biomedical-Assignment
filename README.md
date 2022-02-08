@@ -10,8 +10,9 @@
 | :--- | :---   | :--- |
 | X ZAID | s4848329@studenti.unige.it | [Federista](hhttps://github.com/federista)
 | Muhammad Malook Bugty | s4904540@studenti.unige.it | [Mbugti](https://github.com/mbugti)
-| Amanzhol Raisov | s4889656@studenti.unige.it | [robotmiro1](https://github.com/robotmiro1)
-| Laura Triglia | s4494106@studenti.unige.it | [lauratriglia](https://github.com/lauratriglia)
+| Mohammad Azah Hussain | s4916211@studenti.unige.it | 
+| Raja Taha Hussain | s5046306@studenti.unige.it | 
+| Sassi Kumar uppatala | s5058253@studenti.unige.it |
 
 
 ## Project Objectives
