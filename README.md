@@ -13,17 +13,18 @@ University Website
 | Raja Taha Hussain | s5046306@studenti.unige.it | 
 | Sassi Kumar uppatala | s5058253@studenti.unige.it |
  
-  Repository containing updated python script for "main_reaching.py" 
-
-
+ ## PROJECT DESCRIPTION
+  Repository containing updated python script for "main_reaching.py"  An additional checkbox is created which allow user to control directly the
+real mouse or the virtual mouse for reaching a required target.
+ 
+ ## STEPS 
+ Following are the steps that will help user to experience the functionality of the code.
 
 
 ## Link to Videos
 The different videos demonstrating the project can be found [here](https://drive.google.com/drive/folders/1mqPmZlZjmXwdSp38TwOnLGj_f8_i_d6y?usp=sharing)
 
-## Code description
 
-The main features of the code may be found [click here](https://omotoye.github.io/markerlessBoMI_FaMa/)
 
 ## User Guide
 1. First you need to follow the setup instructions on this [link](setup_instructions.md)
