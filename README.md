@@ -1,10 +1,18 @@
 # Biomedical-Assignment
 <a href="https://unige.it/en/">
 <img src="images/genoa_logo.png" width="20%" height="20%" title="University of Genoa" alt="University of Genoa" >
-</a>
+
+ Repository containing updated python script for "main_reaching.py" 
 
 # Biomedical Robotics Final Project
+_In alphabetic order:_
 
+| Name | email  | profile |
+| :--- | :---   | :--- |
+| X ZAID  s4848329@studenti.unige.it  [Federista](hhttps://github.com/federista)
+| Muhammad Malook Bugty | s5083365@studenti.unige.it | [hypothe](https://github.com/hypothe)
+| Amanzhol Raisov | s4889656@studenti.unige.it | [robotmiro1](https://github.com/robotmiro1)
+| Laura Triglia | s4494106@studenti.unige.it | [lauratriglia](https://github.com/lauratriglia)
 
 
 ## Project Objectives
