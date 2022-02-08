@@ -74,20 +74,13 @@ step 8 --> Cd to correct folder
     $ python3 main_reaching.py
 ``` 
  GUI 
- Image[https://github.com/federista/Biomedical-Assignment/blob/main/GUI.png]
+ ![Image](https://github.com/federista/Biomedical-Assignment/blob/main/GUI.png)
 
 
 ## Link to Videos
 The Video demonstrating the project can be found [here](https://github.com/federista/Biomedical-Assignment/blob/main/Recording.mkv)
-
-
-
-## User Guide
-1. First you need to follow the setup instructions on this [link](setup_instructions.md)
-1. Install Coppeliasim EDU version [click here](https://www.coppeliarobotics.com/downloads), it will be necessary to control the robots. 
-2. Run the `main_reaching.py` script (it could take some time to run) the following interface should appear:
  
-![image](https://user-images.githubusercontent.com/72743858/152410128-0d1a43e0-89cc-447b-b098-9c3798f4aa47.png)
+
 
 3. It works exactly like the previous one the main changes are in the `select device` part. 3 other devices can now be controlled in a really similar way. 
 For example in the case of "planar manipulator":
