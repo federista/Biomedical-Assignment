@@ -1,7 +1,6 @@
 # Biomedical-Assignment
 <a href="https://unige.it/en/">
- 
-<img src="images/genoa_logo.png" width="20%" height="20%" title="University of Genoa" alt="University of Genoa" >
+
 
  Repository containing updated python script for "main_reaching.py" 
 
