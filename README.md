@@ -5,12 +5,11 @@
  Repository containing updated python script for "main_reaching.py" 
 
 # Biomedical Robotics Final Project
-_In alphabetic order:_
 
 | Name | email  | profile |
 | :--- | :---   | :--- |
 | X ZAID | s4848329@studenti.unige.it | [Federista](hhttps://github.com/federista)
-| Muhammad Malook Bugty | s5083365@studenti.unige.it | [hypothe](https://github.com/hypothe)
+| Muhammad Malook Bugty | s4904540@studenti.unige.it | [Mbugti](https://github.com/mbugti)
 | Amanzhol Raisov | s4889656@studenti.unige.it | [robotmiro1](https://github.com/robotmiro1)
 | Laura Triglia | s4494106@studenti.unige.it | [lauratriglia](https://github.com/lauratriglia)
 
