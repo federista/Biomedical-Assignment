@@ -79,9 +79,8 @@ step 8 --> Cd to correct folder
 
 ## Link to Videos
  
- <a href="{https://github.com/federista/Biomedical-Assignment/blob/main/Recording.mkv}" title="The Video demonstrating the project can be found ">
-  https://github.com/federista/Biomedical-Assignment/blob/main/Recording.mkv
- 
+ [Video](https://drive.google.com/file/d/1LAhPsVO6NKK0VEg-tnICA0sQ2P42rfPH/view?usp=sharing)
+
 
 
 
