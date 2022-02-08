@@ -1,5 +1,6 @@
 # Biomedical-Assignment
 <a href="https://unige.it/en/">
+ 
 <img src="images/genoa_logo.png" width="20%" height="20%" title="University of Genoa" alt="University of Genoa" >
 
  Repository containing updated python script for "main_reaching.py" 
@@ -15,9 +16,7 @@
 | Sassi Kumar uppatala | s5058253@studenti.unige.it |
 
 
-## Project Objectives
 
-for more information about the project objectives [click here](docs/assignment_instructions.pdf)
 
 ## Link to Videos
 The different videos demonstrating the project can be found [here](https://drive.google.com/drive/folders/1mqPmZlZjmXwdSp38TwOnLGj_f8_i_d6y?usp=sharing)
