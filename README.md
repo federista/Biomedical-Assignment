@@ -9,7 +9,7 @@ _In alphabetic order:_
 
 | Name | email  | profile |
 | :--- | :---   | :--- |
-| X ZAID  s4848329@studenti.unige.it  [Federista](hhttps://github.com/federista)
+| X ZAID | s4848329@studenti.unige.it | [Federista](hhttps://github.com/federista)
 | Muhammad Malook Bugty | s5083365@studenti.unige.it | [hypothe](https://github.com/hypothe)
 | Amanzhol Raisov | s4889656@studenti.unige.it | [robotmiro1](https://github.com/robotmiro1)
 | Laura Triglia | s4494106@studenti.unige.it | [lauratriglia](https://github.com/lauratriglia)
