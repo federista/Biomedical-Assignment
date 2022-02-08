@@ -1,8 +1,7 @@
 # Biomedical-Assignment
 <a href="https://unige.it/en/">
+University Website
 
-
- Repository containing updated python script for "main_reaching.py" 
 
 # Biomedical Robotics Final Project
 
@@ -13,6 +12,8 @@
 | Mohammad Azah Hussain | s4916211@studenti.unige.it | 
 | Raja Taha Hussain | s5046306@studenti.unige.it | 
 | Sassi Kumar uppatala | s5058253@studenti.unige.it |
+ 
+  Repository containing updated python script for "main_reaching.py" 
 
 
 
