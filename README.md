@@ -1,250 +1,79 @@
 # Biomedical-Assignment
-# Abstract
+<a href="https://unige.it/en/">
+<img src="images/genoa_logo.png" width="20%" height="20%" title="University of Genoa" alt="University of Genoa" >
+</a>
 
-**IMPORTANT**: the following installation steps come from the original repository and are left here in case of the need for a "bare metal" install. However, it's highly suggested to use the Docker image provided or, if you are interested in using the whole [Body-Machine Interface](https://github.com/hypothe/bomi-cam-unity3dof-control) project, give a look at its repository and the provided docker-compose.
+# Biomedical Robotics Final Project
 
-# UBUNTU installation steps:
 
-**TESTED with python>=3.7**
 
-step 0 --> open a terminal and cd to the home folder:
+## Project Objectives
 
-``` 
-    $ cd
-``` 
+for more information about the project objectives [click here](docs/assignment_instructions.pdf)
 
-step 1 --> [if not done yet] install pip and venv:
+## Link to Videos
+The different videos demonstrating the project can be found [here](https://drive.google.com/drive/folders/1mqPmZlZjmXwdSp38TwOnLGj_f8_i_d6y?usp=sharing)
 
-``` 
-    $ sudo apt-get update
-    $ sudo apt install python3-pip
-    $ sudo apt install build-essential libssl-dev libffi-dev python3-dev
-    $ sudo apt install python3-venv
-``` 
+## Code description
 
-step 2 --> create a virtual environment called BoMI:
+The main features of the code may be found [click here](https://omotoye.github.io/markerlessBoMI_FaMa/)
 
-``` 
-    $ python3 -m venv BoMI
-``` 
+## User Guide
+1. First you need to follow the setup instructions on this [link](setup_instructions.md)
+1. Install Coppeliasim EDU version [click here](https://www.coppeliarobotics.com/downloads), it will be necessary to control the robots. 
+2. Run the `main_reaching.py` script (it could take some time to run) the following interface should appear:
+ 
+![image](https://user-images.githubusercontent.com/72743858/152410128-0d1a43e0-89cc-447b-b098-9c3798f4aa47.png)
 
-step 3 --> activate virtual enviroment:
+3. It works exactly like the previous one the main changes are in the `select device` part. 3 other devices can now be controlled in a really similar way. 
+For example in the case of "planar manipulator":
 
-``` 
-    $ source BoMI/bin/activate
-``` 
+- By selecting it two successive windows will appear and Coppeliasim will open on your computer as follows: 
+![image](https://user-images.githubusercontent.com/72743858/152410958-648de308-8578-4f6c-8cb3-b421449068ae.png)
 
-step 4 --> upgrade pip and install all the packages nedded for markerlessBoMI:
+- Press the play ![image](https://user-images.githubusercontent.com/72743858/152411034-623de161-0f2d-41fe-839e-fb4128cd6f56.png) button to allows to link CoppeliaSim with the script.
+- Execute the calibration and then the practice as in the previous cases (this last step may take some time).
+- Now by moving the head the robot should move accordingly.
+- To have better control we advise changing the view for a top one clicking on the icon below.
 
-``` 
-    $ pip install --upgrade pip
-    $ pip install git+https://github.com/MoroMatteo/markerlessBoMI_FaMa.git
-``` 
+![image](https://user-images.githubusercontent.com/72743858/152435220-8d173692-96f9-4fc8-ab0b-164656d3706f.png)
 
-step 5 --> istall tkinter:
+ 
 
-``` 
-    $ sudo apt install python3-tk
-``` 
+## Available systems
 
-step 6 --> clone the github repository:
+Three different robots may be controlled thanks to the BOMI system: 
+1. **RRR Planar manipulator**, made by us in the AUTOCAD program  [AUTODESKINVENTOR](https://www.autodesk.com/products/inventor-lt/overview?mktvar002=afc_fr_nmpi_ppc&AID=11043042&PID=8227014&gclsrc=aw.ds&ds_rl=1232386&ds_rl=1232407&ds_rl=1232410&SID=jkp_CjwKCAiAl-6PBhBCEiwAc2GOVKCKCVERaGmKnMb4ls1yjDRXe1MEFt0hfhDcdbmbsovZApgB4GwjxBoCvQ8QAvD_BwE&cjevent=4239846f852511ec8110083e0a180513&affname=8227014_11043042&cjdata=MXxZfDB8WXww)
 
-``` 
-    $ git clone https://github.com/MoroMatteo/markerlessBoMI_FaMa.git
-``` 
+The model is made in three parts which .obj file can be found in the `...\markerlessBoMI_FaMa-main\CoppeliaSim\Parts` folder. 
 
-step 7 --> cd in the correct folder and run main_reaching.py:
+![image](https://user-images.githubusercontent.com/72743858/152412787-5c7ae4e0-c41f-43f7-bfe8-00d0dc972061.png)
 
-``` 
-    $ cd markerlessBoMI_FaMa/
-    $ python3 main_reaching.py
-``` 
+In Coppeliasim to reduce time computation some basic shapes as been used as kinematic meshes, and the 3D meshes as visible ones. 
 
-step 8 --> follow the steps in the GUI (see below after WINDOWS installation steps)
+![image](https://user-images.githubusercontent.com/72743858/152413574-219d271b-4a1f-4fd2-af63-980a7db69f22.png)
+![image](https://user-images.githubusercontent.com/72743858/152413817-d878e2db-bf0f-46ea-b528-eb4ff1a9006e.png)
 
-# MAC installation steps:
+The gripper instead is a model already implemented in Coppeliasim. 
 
-**TESTED with python>=3.7**
+2. **3-PRRR Planar Manipulator**, it is still in "beta" as the dimensions are not satisfactory and allow a small workspace. It's a parallel robot with only the prismatic joints actuated. The goal of such a device is to allow to have a large load without using too much power by limiting as possible the weight of actuators and their effects on inertial. 
+The Kinematic model of such devices can be easily found in the literature (for example [here](
+https://github.com/Omotoye/markerlessBoMI_FaMa/files/7997616/JPM_DirectKinematicsPlanarParallelManipulators.pdf)).
+To go further on this topic an optimization algorithm could be used to optimize the lengths of the different links as suggested [on this paper](https://github.com/Omotoye/markerlessBoMI_FaMa/files/7997633/CIRP_Design_2010_Book_Caro_Chablat_UrRehman_Wenger.pdf).
 
-step 0 --> install python (if not already installed), pip and virtualenv
+![image](https://user-images.githubusercontent.com/72743858/152417492-2eb13b37-a8b4-484b-9733-f9387f4b4648.png)
 
-step 1 --> create a virtual environment called BoMI:
+3. **Kukka Mobile Robot**, this system is composed of 4 actuated Swedish Wheels (allowing also a translation along the perpendicular axis to the chassis).
 
-``` 
-    $ python3 -m venv BoMI
-``` 
+![image](https://user-images.githubusercontent.com/72743858/152420317-4648a47d-70bf-4f0a-8623-e3362d1847dc.png)
 
-step 2 --> activate virtual enviroment:
 
-``` 
-    $ source BoMI/bin/activate
-``` 
 
-step 3 --> upgrade pip and install all the packages nedded for markerlessBoMI:
 
-``` 
-    $ pip install --upgrade pip
-    $ pip install git+https://github.com/MoroMatteo/markerlessBoMI_FaMa.git
-``` 
 
-step 4 --> istall tkinter:
 
-``` 
-    $ pip install tk
-``` 
 
-step 5 --> clone the github repository:
 
-``` 
-    $ git clone https://github.com/MoroMatteo/markerlessBoMI_FaMa.git
-``` 
 
-step 6 --> cd in the correct folder and run main_reaching.py:
 
-``` 
-    $ cd markerlessBoMI_FaMa/
-    $ python3 main_reaching.py
-``` 
 
-step 7 --> follow the steps in the GUI (see below after WINDOWS installation steps)
-
-
-# WINDOWS installation steps:
-
-**TESTED with python>=3.7**
-
-step 0 --> download Python3 at this link https://www.python.org/downloads/ [**During installation select Add Python to PATH**]
-
-step 1 --> enable long path (https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/) --> remember to launch regedit as root ("amministratore")
-
-step 2 --> open a command window (terminal) as root ("amministratore") and type 
-
-``` 
-    $ cd
-``` 
-
-step 3 --> install pip and virtualenv
-
-``` 
-    $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-    $ python get-pip.py
-    $ pip install virtualenv
-``` 
-
-step 4 --> create virtualenv (named BoMI) and activate it
-
-``` 
-    $ python -m venv BoMI
-    $ BoMI\Scripts\activate
-``` 
-
-step 5 --> Upgrade pip and download all the packages (you should be in the folder where requirments.txt is). In the terminal type:
-
-``` 
-    $ pip install --upgrade pip
-    $ pip install -r requirments.txt
-``` 
-If the line before does not work, download all the following packages (in the terminal):
-
-``` 
-    $ pip install numpy
-    $ pip install pandas
-    $ pip install matplotlib
-    $ pip install pygame
-    $ pip install pyautogui
-    $ pip install tensorflow
-    $ pip install mediapipe
-    $ pip install scipy
-    $ pip install sklearn
-    $ pip install opencv-python
-``` 
-
-step 6 --> Download Visual Studio Code (https://code.visualstudio.com/download)
-
-Step 7 --> Download the repository from the current github page and open it as a folder in Visual Studio Code
-
-step 8 --> Download 'python extension' for Visual Studio Code (on the left side select 'Extensions' and download python)
-
-step 9 --> Set the correct python interpreter (the one of the virtual environment created - BoMI\Scripts\python) in Visual Studio Code from the bottom left corner: left click on the bottom left corner and follow the instruction searching for BoMI\Scripts\python.
-
-step 10 --> eventually [not always] there is the possibility that it is necessary to do the steps described here https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads
-
-step 11 --> On Visual Studio Code run the file main_reaching.py
-
-# Graphical User Interface
-
-[**READ CAREFULLY UNTIL THE END**] 
-If you run the script main_reaching.py, you should see something like this:
-
-![BoMI_0](https://user-images.githubusercontent.com/75327840/142367411-f78e3f09-481a-4edd-95c4-f8a23778b0e2.png)
-Figure 1. Markerless BoMI GUI.
-
-**Step 1: Select Joints**. As you can notice, only the button **Select Joints** is available. You should select the anatomical joints you want to use to control the cursor (click on the corresponding checkbox, try for example **Nose** and **Shouders**), and, then, press **Select Joints**:
-
-![BoMI_1](https://user-images.githubusercontent.com/75327840/142368575-1152f407-1e94-474d-acee-292905ff7db8.png)
-Figure 2. Select the anatomical points you want to use to control the cursor and then press Select Joints.
-
-After this step, also the others buttons should be visible. To complete the task, you have to follow the following steps **in order**.
-
-**Step 2: Calibration**. During the calibration step, you should move the anatomical points you selected during the previous step facing your webcam. Make sure only you are visible from the webcam with nobody else (only one person should be visible). Press the button **Calibration**: a new window will pop up (see Figure 3). Press **ok** and start moving your joints facing the webcam for 30 seconds (a countdown as in Figure 4 will appear). **During the calibration try to cover with your movements all the space seen by your webcam**. The calibration is an important step and it is possible that you have to do it multiple times.
-
-![BoMI_3](https://user-images.githubusercontent.com/75327840/142370385-1e202942-34ce-4f54-8f0b-eb73aa30f8cc.png)
-Figure 3. Window that will pop up after pressing the button **Calibration**. Press **ok** and start moving your selected joints.
-
-![BoMI_4](https://user-images.githubusercontent.com/75327840/142370626-20db02ec-17ff-48bf-bf3b-af29bd5de480.png)
-Figure 4. Countdown during calibration. You should move for 30 seconds.
-
-**Step 3: Calculate BoMI Map**. **Before** pressing the button, select the checkbox correspondent to the dimensionality reduction algorithm you want to use. By default 'PCA' is selected (see Figure 2). If you want to change it, deselect the checkbox near 'PCA' and select another one. We suggest to use **Variational AE** (variational autoencoder) as in Figure 5. **After** that, you can press the button **Calculate BoMI Map**. A new window similar to the one in Figure 3 will pop up. Press **ok** and **wait** some seconds (needed to calculate the BoMI Map - have a look at the terminal, you should see when the process is done.
-
-![BoMI_5](https://user-images.githubusercontent.com/75327840/142371433-4a5e15af-4301-4702-8ab4-746d46aa2f0e.png)
-Figure 5. Select Variational AE and, then, press Calculate BoMI Map.
-
-**Step 4: Customization**. When the Calculate BoMI Map step is done (look at the terminal), you can press the button **Customization**. A window as the one shown in Figure 6 should pop up.
-
-![BoMI_6](https://user-images.githubusercontent.com/75327840/142372287-21feb4e8-2e72-4f97-acb8-75aa4648dd1c.png)
-Figure 6. Window that will pop up after pressing the **Customization** button.
-
-At this point you can press the button **Start**. A window as the one in Figure 7 should appear. **If you move the joints selected, you should see the small green dot (virtual cursor) moving**. The default parameters suggested in the window (Figure 6) should be fine to cover all the space. If yes, close the window in Figure 7 and press **Save Parameters**. If you notice some problems (for example you can not reach with your movements some target of the window in Figure 7 with the green virtual cursor), you have to close the window in Figure 7, change the parameters in the Figure 6 and then press the button **Start**. You should repet this process until all the targets of the window in Figure 7 are reachable. At the end press **Save Parameters**.
-
-![BoMI_7](https://user-images.githubusercontent.com/75327840/142373973-f321173b-e6fd-4f0c-8aee-1ace747f4785.png)
-Figure 7. Window to tune the customization parameters.
-
-**Step 5: Practice**. When you finish with the customization step, you can press the button **Pratice** and a window as the one in Figure 8 will appear. At this point you will start the **reaching task**. 
-**[IMPORTANT!! If for any reason you are stuck and you want to close the application press the key 'p' in your keyboard and it will pause the program]**
-
-The reaching task is composed of many steps (almost 300, you will take ~45 minutes to finish it and you should do it without interrupting). You should move your joints in order to move the green dot (virtual cursor) in order to reach the targets that appear in the screen. Once reached, the targets color become yellow. You have to stay inside the target for some milliseconds and then you will see another target appearing somewhere in the screen. Keep going until the end. Two events could happen: (i) sometimes the virtual cursor disappear for some seconds (~15s); you should try to reach the target as always but without having the visual feedback of where the virtual cursor is. If you can not reach it before ~15s the virtual cursor will appear again and you will be able to reach the target with the visual feedback. (ii) After some trial, periodically, the virtual cursor will freeze in order to give you the possibility to do a small break. If you want to continue the task, press the key 'p' on your keyboard.
-
-**[VERY IMPORTANT, for robotics students!! At the end of the practice, inside the folder markerlessBoMI_FaMa, you will see that a folder called 'Practice' will be created. Inside it you will find a file called 'PracticeLog.txt'. Rename it if you want to do multiple practice.]** Anyway, at the end of each practice (the ones during which you reach the very end) rename the file 'PracticeLog.txt' with your 'Name_Surname.txt' and send it to matteo.moro@edu.unige.it. In the email you should indicate the joints you selected for the task (the easiest ones are nose and/or shoulders), the dimensionality reduction algorithm you used (PCA, AE, Variational AE) and the specifics of the computer where you performed it (CPU, if you have a GPU, etc ....).
-
-![BoMI_8](https://user-images.githubusercontent.com/75327840/142374722-5f860b01-58fd-4293-882d-bfee32afd507.png)
-Figure 8. Start the reaching task.
-
-# The Docker Image
-
-A docker image is hosted at [hypothe/bomi_fama](https://hub.docker.com/repository/docker/hypothe/bomi_fama), which includes a complete environment with all the dependencies needed to run the contents of this repository.
-To launch the image execute one of the two scripts presented at the end of the dir `docker_run_scripts`, choosing `run_bomi.sh` on Unix systems and `run_bomi_wsl.sh` on WSL2 (to be run inside the WSL distribution, requires WSLG or an external xServer) running systems.
-
-Said image pulls from the `server-test` branch of this repository (*this will change as soon as that content will be moved into the `main` stable branch), and includes the possibility to use an external video source instead of a camera device.
-This, while not directly useful, allows to have repeatable tests with the same source (and eases the development process, not requiring the developers to move their head around for ~30 seconds each time they need to test the system).
-To use an external video file record it with whichever program of your choice (eg. `ffmpeg` on Unix, `Camera` app on Windows) and then move it inside the container with the following command:
-
-```bash
-docker cp <video_name> <container_name>:/root/videos/
-```
-*be careful: the trailing slash is important, or you would end up copying the file to the `root` folder of the container, renaming it as `videos`!*
-
-Next, once you launch the program and the GUI appears, click on the "Ext. Video Source" button: you will be presented with a simple file system research, use it to search for the video you just copied to the container. Click okay and that's it! Or, if you prefere, directly write the absolute path of the file in the text bar to the right of the button. You will have the confirmation everything went through when, clicking on the "Calibration" button, a window will open and show your external source, instead of the camera feed.
-If, instead, you want to go back to using the camera, click on the red button "Camera Video Source" to the right of the text bar, which will deselect any external source file and instead instruct the program to use the camera 0.
-
-> NOTE: the camera will also be selected if you press "Cancel" at any point during the search for an external video source.
-
-> NOTE: In case you had more than one camera and would like to select a different one (the N-th one) from the default `/dev/video0` write `/dev/video*N*` in the text bar, aka directly specify the name of the device.
-
-## A note on Windows users:
-
-Right now, in the docker environment, using the external video source instead of the camera is the **easiest** solution, as WSL2 does not, to this day, *directly* support sharing devices between the Windows OS and WSL itself, which in turn means those cannot be accessed by the container. While there are some un-official solutions, these are generally cumbersome, or not fully supported (eg. if interested give a look at [wsl-usbip](https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/) an almost-official on-going project, which I tried with small degrees of success but might become useful in the near future). So, try to stick to this workaround if you can, while testing/exapnding the system.
-
-
-# The whole project
-
-This is a submodule of the project [Body-Machine Interface](https://github.com/hypothe/bomi-cam-unity3dof-control).
