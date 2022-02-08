@@ -67,10 +67,12 @@ step 7 --> Download the repository from the current github page and open it as a
 
 ``` 
 step 8 -->  Cd to correct folder:
+ 
  ```
     $ cd markerlessBoMI_FaMa/
     $ python3 main_reaching.py
  ```
+ 
 
 
 ## Link to Videos
