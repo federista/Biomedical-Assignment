@@ -73,11 +73,12 @@ step 8 --> Cd to correct folder
     $ cd markerlessBoMI_FaMa/
     $ python3 main_reaching.py
 ``` 
- 
+ GUI 
+ Image[https://github.com/federista/Biomedical-Assignment/blob/main/GUI.png]
 
 
 ## Link to Videos
-The different videos demonstrating the project can be found [here](https://github.com/federista/Biomedical-Assignment/blob/main/Recording.mkv)
+The Video demonstrating the project can be found [here](https://github.com/federista/Biomedical-Assignment/blob/main/Recording.mkv)
 
 
 
