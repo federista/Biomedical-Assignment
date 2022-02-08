@@ -66,7 +66,7 @@ step 6 --> Install pycharm:
 step 7 --> Download the repository from the current github page and open it as a folder in Pycharm or Follow Step 8:
 
 ``` 
-
+```
 step 8 --> Cd to correct folder
 
 ```    
