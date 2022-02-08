@@ -58,13 +58,16 @@ step 5 --> clone the github repository:
     $ git clone https://github.com/federista/Biomedical-Assignment.git
 ``` 
 step 6 --> Install pycharm:
+ ```
     $ sudo snap install pycharm-community --classic
+ 
  ```
 
 step 7 --> Download the repository from the current github page and open it as a folder in Pycharm or Follow Step 8:
 
 ``` 
 step 8 -->  Cd to correct folder:
+ ```
     $ cd markerlessBoMI_FaMa/
     $ python3 main_reaching.py
  ```
